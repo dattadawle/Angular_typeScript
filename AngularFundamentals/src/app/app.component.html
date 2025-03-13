@@ -1,0 +1,29 @@
+<h1>App component loaded</h1>
+
+<h3>Interpolation Syntax</h3>
+
+<!-- <p>{{title}}</p> -->
+
+<h3>Property binding</h3>
+<input type="button" value="{{title}}"  disabled="{{isDisabled}}"/>
+
+<h3>Property binding</h3>
+<input type="button" [value]="title" [disabled]="isDisabled"/>
+
+<h3>Two way data binding</h3>
+
+Enter Something :<input type="text"[(ngModel)]="userName">
+<p>Entered text :{{userName}}</p>
+
+<h3>property binding syntax to set styles</h3>
+
+<p [style.color]="color" [style.backgroundColor]="bgColor">paragraph text</p> 
+
+<h3>using ngStyle directive</h3>
+<p [ngStyle]="paragraphStyle">setting style using ngStyle </p>
+
+<!-- <h3 class="importent veryImportent">ngClass Directive</h3> -->
+
+<!-- <h3 [class.importent]="IsImportent" [class.veryImportent]="IsVeryImportent">ngClass Directive</h3> -->
+
+<h3 [ngClass]="classes">ngClass Directive</h3>

@@ -7,11 +7,12 @@ import { Component } from "@angular/core";
    // template: "<h2> second component page</h2>"
 
    templateUrl : './second.component.html', 
-   styles: [`
-    h1{
-     color: blue;
-    }
-    `]
+//    styles: [`
+//     h1{
+//      color: blue;
+//     }
+//     `]
+styleUrls:['./second.component.css']
 })
 export class SecondComponent{
 
