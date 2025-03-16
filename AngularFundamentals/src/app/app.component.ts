@@ -23,5 +23,11 @@ export class AppComponent {
   IsImportent:boolean=true;
   IsVeryImportent:boolean=true;
 
-  classes= {'importent': this.IsImportent,'veryImportent:': this.IsVeryImportent}
+  classes= {'importent': this.IsImportent ,'veryImportent': this.IsVeryImportent}
+
+  isVisible:boolean=false;
+
+  names:string[]=["shankar","Gaju","avinash","datta"]
+
+  country: string | undefined;
 }

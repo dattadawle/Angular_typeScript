@@ -27,3 +27,44 @@ Enter Something :<input type="text"[(ngModel)]="userName">
 <!-- <h3 [class.importent]="IsImportent" [class.veryImportent]="IsVeryImportent">ngClass Directive</h3> -->
 
 <h3 [ngClass]="classes">ngClass Directive</h3>
+
+<div style="height: 50px; width: 100px; background-color: red;">
+    <p *ngIf="isVisible; else second">First Paragraph as condition true</p>
+   
+    <ng-template #second>
+        <p >second Paragraph as condition false</p>
+    </ng-template>
+</div>
+
+<h3>ngFor Directive</h3>
+
+<!-- <ul>
+    <li>datta</li>
+    <li>pratik</li>
+    <li>parmeshwar</li>
+</ul> -->
+
+<ul>
+    <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<!-- <h1 *ngFor="let name of names">{{name}}</h1> -->
+
+select Favarite student :
+<select name="" id="">
+    <option value="-1">---select Student---</option>
+    <option *ngFor="let name of names">{{name}}</option>
+</select>
+
+<h3>ngSwitch Directive</h3>
+
+Country Code: <input type="text" [(ngModel)]="country">
+
+<div [ngSwitch]="country">
+    <p *ngSwitchCase="'IND'">India</p>
+    <p *ngSwitchCase="'USA'">United States of America</p>
+    <p *ngSwitchCase="'PAK'">Pakistan</p>
+    <p *ngSwitchCase="'SA'">South Africa</p>
+    <p *ngSwitchDefault="'SA'">INVALID COUNTRY SELECTED</p>
+    
+</div>
