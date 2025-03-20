@@ -91,7 +91,7 @@ var F = /** @class */ (function () {
         if (typeof num === "number" && typeof s === "undefined") {
             console.log("print(num : number) : ".concat(num));
         }
-        else if (typeof s === "string" && typeof num === "undefined") {
+        else if (typeof num === "string" && typeof s === "undefined") {
             console.log("print(s : string):void : ".concat(num));
         }
         else if (typeof num === "number" && typeof s === "string") {

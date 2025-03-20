@@ -1,0 +1,24 @@
+<p>users works!</p>
+
+<h2>Users list</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th> <th>City</th> <th>Salary</th> <th>Speciality</th> <th>DOB</th> <th>Oder Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users">
+            <td>{{user.name | uppercase}}</td>
+            <td>{{user.city | lowercase}}</td>
+            <!-- <td>{{user.salary | number}}</td> -->
+            <!-- <td>{{user.salary | currency : "INR"}}</td> -->
+            <!-- <td>{{user.salary | currency : "INR" : 'code'}}</td> -->
+            <td>{{user.salary | currency : "USD" : 'code'}}</td>
+            <td>{{user.speciality | titlecase}}</td>
+            <td>{{user.dob | date : 'dd/mm/yyyy'}}</td>
+            <td>{{user.orderamount | number : '3.2-2' }}</td>
+        </tr>
+    </tbody>
+</table>

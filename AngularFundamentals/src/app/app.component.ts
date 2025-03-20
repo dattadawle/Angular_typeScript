@@ -14,10 +14,16 @@ export class AppComponent {
   color: string='red';
   bgColor:string='yellow';
 
-  paragraphStyle ={
+  // paragraphStyle ={
+  //   'background-Color':'skyblue',
+  //   'color':'red', 
+  //   'border':'1px  dotted black'
+  // }
+
+  praraphStyle={
     'background-Color':'skyblue',
-    'color':'red', 
-    'border':'1px  dotted black'
+    'color': 'black'
+    
   }
 
   IsImportent:boolean=true;

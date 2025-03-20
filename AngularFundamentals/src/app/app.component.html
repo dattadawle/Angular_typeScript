@@ -20,15 +20,17 @@ Enter Something :<input type="text"[(ngModel)]="userName">
 <p [style.color]="color" [style.backgroundColor]="bgColor">paragraph text</p> 
 
 <h3>using ngStyle directive</h3>
-<p [ngStyle]="paragraphStyle">setting style using ngStyle </p>
+<!-- <p [ngStyle]="paragraphStyle">setting style using ngStyle </p> -->
+
+<p [ngStyle]="praraphStyle">styling with ngStyle</p>
 
 <!-- <h3 class="importent veryImportent">ngClass Directive</h3> -->
 
-<!-- <h3 [class.importent]="IsImportent" [class.veryImportent]="IsVeryImportent">ngClass Directive</h3> -->
+<!-- <h3 [class.importent]="IsImportent" [class.veryImportent]="IsVeryImportent">ngClass Directive</h3>  -->
 
 <h3 [ngClass]="classes">ngClass Directive</h3>
 
-<div style="height: 50px; width: 100px; background-color: red;">
+<div style="height: 50px;  width: 100px; background-color: red;">
     <p *ngIf="isVisible; else second">First Paragraph as condition true</p>
    
     <ng-template #second>
