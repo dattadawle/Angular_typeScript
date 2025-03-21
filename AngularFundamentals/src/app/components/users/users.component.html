@@ -17,8 +17,17 @@
             <!-- <td>{{user.salary | currency : "INR" : 'code'}}</td> -->
             <td>{{user.salary | currency : "USD" : 'code'}}</td>
             <td>{{user.speciality | titlecase}}</td>
-            <td>{{user.dob | date : 'dd/mm/yyyy'}}</td>
+            <!-- <td>{{user.dob | date : 'dd/mm/yyyy'}}</td> -->
+            <!-- <td>{{user.dob | age:'day'}}</td> -->
+            <!-- <td>{{user.dob | age:'month'}}</td> -->
+            <td>{{user.dob }}</td>
             <td>{{user.orderamount | number : '3.2-2' }}</td>
         </tr>
     </tbody>
 </table>
+
+<div>
+<pre>
+    {{users | json}}
+</pre>
+</div>

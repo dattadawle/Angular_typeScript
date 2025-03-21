@@ -1,0 +1,7 @@
+<div>   
+    <h2>Child Component</h2>
+    <p>receiveParentData: {{receiveparentData}}</p>
+   Enter: <input type="text" [(ngModel)]="childData" (keyup)="sendDataToParent()"/>
+   <hr>
+    <input type="button" value="send data to parent" (click)="sendDataToParent()"/>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <h1>Parent Component</h1>
+
+  <p>  parent data :{{parentData}}</p>
+Name :<input type="text" [(ngModel)]="parentData">
+
+    <app-child [receiveparentData]="parentData" (sendData)="receiveData($event)" ></app-child>
+
+ <p>data from child component : {{receiveChildData}}</p>
+</div>
+
+<h3 id="heading3" #heading3 >Heading 3</h3>
+<h3 #heading3>second Heading 3</h3>
+<p #para>paragraph 1</p>
+<p #para>paragraph 2</p>
+<input type="button" value="click me!!!" (click)="getHeading()"/>
