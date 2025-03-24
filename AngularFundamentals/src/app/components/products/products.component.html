@@ -1,0 +1,15 @@
+<div class="col-6">
+<ng-content select=".heading"></ng-content>
+<table class="table table-bordered">
+    <tr #tableheading>
+        <th>id</th> <th>name</th> <th>price</th>
+    </tr>
+
+    <tr *ngFor="let prod of Products">
+         <td> {{prod.id}}</td> <td > {{prod.name}}</td> <td>{{prod.price}}</td>
+    </tr>
+</table>
+
+<ng-content select=".footer"></ng-content>
+
+</div>

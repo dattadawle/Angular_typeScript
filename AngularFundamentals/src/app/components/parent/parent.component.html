@@ -4,7 +4,7 @@
   <p>  parent data :{{parentData}}</p>
 Name :<input type="text" [(ngModel)]="parentData">
 
-    <app-child [receiveparentData]="parentData" (sendData)="receiveData($event)" ></app-child>
+    <app-child [receiveparentData]="parentData" (sendData)="receiveData($event)" #child ></app-child>
 
  <p>data from child component : {{receiveChildData}}</p>
 </div>

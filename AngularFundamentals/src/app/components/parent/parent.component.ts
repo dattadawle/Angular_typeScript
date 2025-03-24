@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Unsubscribable } from 'rxjs';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -16,7 +17,10 @@ export class ParentComponent implements AfterViewInit {
   heading3? :ElementRef;
 
   @ViewChildren('para')
-  para?:QueryList<any>;
+  para:QueryList<any> =new QueryList<any>();
+
+  @ViewChild("child")
+  child:ChildComponent=new ChildComponent();
 
 
   constructor(){
@@ -29,6 +33,14 @@ export class ParentComponent implements AfterViewInit {
     console.log(this.para);
     this.para?.first.nativeElement.setAttribute('style','color:blue;');
     this.para?.last.nativeElement.setAttribute('style','color:green;');
+
+    for(let p of this.para)
+      {
+      p.nativeElement.setAttribute('style','color:red');
+      p.nativeElement.innerText= 'hii datta here..';
+    }
+
+    console.log(`child componenet data: ${this.child.childData} ` )
   }
   receiveData(data : string){
       this.receiveChildData=data;

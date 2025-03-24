@@ -7,6 +7,8 @@ import { UsersComponent } from './components/users/users.component';
 import { AgePipe } from './pipes/age.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,15 @@ import { ChildComponent } from './components/child/child.component';
     UsersComponent,
     AgePipe,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ParentComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
