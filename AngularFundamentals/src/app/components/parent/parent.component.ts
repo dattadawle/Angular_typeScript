@@ -13,6 +13,8 @@ export class ParentComponent implements AfterViewInit {
 
   receiveChildData:string |  undefined;
 
+  trialname:string| undefined;
+
   @ViewChild('heading3')
   heading3? :ElementRef;
 

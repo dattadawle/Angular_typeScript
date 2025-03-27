@@ -9,6 +9,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ReverseStringPipe } from './pipes/reverse-string.pipe';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import { ProductsComponent } from './components/products/products.component';
     ParentComponent,
     ChildComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    ReverseStringPipe
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [HomeComponent]
+  bootstrap: [ParentComponent]
 })
 export class AppModule { }
